@@ -1,4 +1,4 @@
-# MintFlow
+# MintFlow: Minimal Trajectory Intervention for Constrained Flow Matching
 
 This repository contains the code for **MintFlow**, a training-free constrained sampling framework.
 
