@@ -8,9 +8,17 @@ Install the required dependencies with:
 
     pip install -r requirements.txt
 
-## Pretrained Models and Baselines
+## Pretrained Models
 
-The pretrained Rectified Flow models and baseline implementations used in our experiments are directly adopted from the official [FlowChef](https://github.com/FlowChef/flowchef) repository without modification.
+Download the pretrained Rectified Flow model:
+
+    mkdir -p ./checkpoints/
+    wget -c https://huggingface.co/wangfuyun/Rectified-Diffusion/resolve/main/weights/rd.ckpt -P ./checkpoints/
+
+## Baselines
+
+The baseline implementations used in our experiments are directly adopted from the official [FlowChef](https://github.com/FlowChef/flowchef) repository without modification.
+
 
 ## Running Image Inverse Problems
 
@@ -32,4 +40,4 @@ Then run:
 
 ## Acknowledgements
 
-We thank the authors of [FlowChef](https://github.com/FlowChef/flowchef) for publicly releasing the pretrained Rectified Flow models and baseline implementations used in this work.
+We thank the authors of [FlowChef](https://github.com/FlowChef/flowchef) for publicly releasing the baseline implementations used in this work.
