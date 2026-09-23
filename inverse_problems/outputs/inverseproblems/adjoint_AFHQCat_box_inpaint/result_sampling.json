@@ -1,0 +1,11 @@
+{
+    "straightness_mean": 3.1970694065093994,
+    "straightness_std": 0.48611974716186523,
+    "nfes_mean": 10,
+    "average_time": 0.4036458134651184,
+    "average_max_memory": 327.394775390625,
+    "average_H": 0.0004242464929120615,
+    "average_PSNR": 28.08232328911013,
+    "average_SSIM": 0.9286894202232361,
+    "average_LPIPS": 0.031001025810837746
+}
