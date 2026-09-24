@@ -1,0 +1,66 @@
+# Heat/RD1D production environment, locked with uv.
+[build-system]
+requires      = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name        = "constrained-flow-matching"
+version     = "0.1.0"
+description = "MintFlow constrained sampling for pretrained flow-matching PDE models"
+requires-python = ">=3.10,<3.13"
+
+dependencies = [
+    "torch>=2.2.0",
+    "numpy>=1.26.0",
+    "scipy>=1.11.0",
+    "pyyaml>=6.0.0",
+    "h5py>=3.9.0",
+    "tqdm>=4.66.0",
+    "neuraloperator>=0.3.0,<1.0.0",
+    "gpytorch>=1.15.2",
+    "torchdiffeq>=0.2.5",
+    "wandb>=0.28.0",
+    "easydict>=1.13",
+    "pillow>=12.2.0",
+    "matplotlib>=3.10.9",
+    "scienceplots>=2.1.1",
+    "torch-harmonics>=0.8.0",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.4.0",
+    "pytest>=8.2.0",
+]
+
+[[tool.uv.index]]
+name     = "pytorch-cuda121"
+url      = "https://download.pytorch.org/whl/cu121"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cuda121" }
+
+[tool.hatch.build.targets.wheel]
+packages = ["datasets", "eval_pde", "models", "sampling", "visualization"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]   # pycodestyle + pyflakes + isort
+ignore = ["E501"]               # line length handled by formatter
+
+[tool.ruff.lint.per-file-ignores]
+# Package initializers intentionally re-export their public API.
+"**/__init__.py" = ["F401"]
+# Executable scripts add the repository root before importing local modules.
+"scripts/*.py" = ["E402"]
+# Small mathematical closures are clearer as lambdas in task/test fixtures.
+"sampling/tasks.py" = ["E731"]
+"eval_pde/tests/*.py" = ["E731"]
+
+[tool.pytest.ini_options]
+testpaths   = ["eval_pde/tests"]
+addopts     = "-v --tb=short"
