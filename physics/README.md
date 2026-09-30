@@ -1,5 +1,10 @@
 # MintFlow: Physical System Modeling
 
+This repository contains the code for physics-informed generation with **MintFlow**.
+
+<p align="center"> <img src="https://github.com/user-attachments/assets/b497f2af-83b8-4eae-a272-7de6fe366e48" width="90%"> </p>
+
+
 ## Environment Setup
 
 Python 3.10--3.12 is supported; Python 3.11 is used for the reported runs. The locked environment installs PyTorch's CUDA 12.1 wheels and therefore requires an NVIDIA driver compatible with CUDA 12.1. The A100 GPUs on NERSC Perlmutter are the reference hardware.
