@@ -1,13 +1,23 @@
 # MintFlow: Minimal Trajectory Intervention for Constrained Flow Matching
 
-This repository contains the code for **MintFlow**, a training-free constrained sampling framework.
+**MintFlow** is a training-free framework for constrained generation with pretrained flow matching models. Instead of modifying the pretrained flow or projecting the final sample, MintFlow applies a **minimal intervention to an intermediate state** and then follows the original flow dynamics to the terminal time.
 
-The repository is organized into three folders corresponding to different application settings:
+This allows MintFlow to satisfy diverse constraints while better preserving the distribution learned by the pretrained model.
 
-- `image_inverse_problems/`: Image inverse problems
-- `image_editing/`: Image editing
-- `physics/`: Physical system modeling
 
-Each setting uses a different dataset, task, constraint, and pretrained flow matching model. Therefore, the implementations are organized separately, with each folder containing its own `requirements.txt` and `README.md` describing the corresponding setup and usage.
+## Applications
 
-Please refer to the README in each folder for installation instructions, pretrained models, datasets, and instructions for running the experiments.
+We provide implementations for three application settings:
+
+- `image_inverse_problems/` — Image inverse problems on AFHQ-Cat and FFHQ
+- `image_editing/` — Text-guided image editing on PIE-Bench
+- `physics/` — Physics-informed generation with PDE constraints
+
+## Getting Started
+
+Please refer to the README of each application:
+
+- [`image_inverse_problems/`](./image_inverse_problems/)
+- [`image_editing/`](./image_editing/)
+- [`physics/`](./physics/)
+
