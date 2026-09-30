@@ -2,6 +2,8 @@
 
 This repository contains the code for image editing with **MintFlow**.
 
+<p align="center"> <img src="https://github.com/user-attachments/assets/3518d2bc-4628-48e4-b0a0-0eedf6943461" width="90%"> </p>
+
 ## Installation
 
 Install the required dependencies with:
