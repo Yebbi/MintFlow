@@ -2,6 +2,19 @@
 
 This repository contains the code for image inverse problems with **MintFlow**.
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/643f3c91-ad71-49b9-8a0d-923a17520d22" width="90%">
+</p>
+
+We consider three image inverse problems:
+
+* Inpainting
+
+* Super-resolution
+
+* Deblurring
+
+
 ## Installation
 
 Install the required dependencies with:
